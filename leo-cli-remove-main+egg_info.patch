@@ -1,0 +1,15 @@
+--- setup.cfg.orig	2023-10-31 00:49:08.734817427 +0100
++++ setup.cfg	2023-10-31 00:49:25.307984735 +0100
+@@ -19,12 +19,3 @@
+ python_requires = >=3.6
+ scripts = leo
+ install_requires = file: requirements.txt
+-
+-[options.entry_points]
+-console_scripts = 
+-	main = leo:main
+-
+-[egg_info]
+-tag_build = 
+-tag_date = 0
+-

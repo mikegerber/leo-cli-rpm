@@ -1,0 +1,29 @@
+From 0f4200d4bc90a25e3232b4ccaa851a7ce609bf54 Mon Sep 17 00:00:00 2001
+From: Mike Gerber <neingeist@bl0rg.net>
+Date: Sun, 29 Oct 2023 06:56:31 +0100
+Subject: [PATCH] Fix beautifulsoup4 dependency
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+PyPI has the bs4 package only to:
+
+"prevent name squatting. The official name of PyPI’s Beautiful Soup Python package is beautifulsoup4. This package ensures that if you type pip install bs4 by mistake you will end up with Beautiful Soup."
+
+Fix this by using the official name.
+
+Using "bs4" also prevented me to update the .spec file according Fedora's Python packaging guidelines (by not autogenerating the correct depedency in the RPM build process.)
+---
+ requirements.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/requirements.txt b/requirements.txt
+index 673cfb5..1f1b3dd 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -1,4 +1,4 @@
+-bs4
++beautifulsoup4
+ requests>=2.0.0
+ tabulate>=0.7.7
+ lxml

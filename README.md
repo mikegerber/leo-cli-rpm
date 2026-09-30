@@ -1,6 +1,6 @@
-# dtrx-rpm
+# leo-cli-rpm
 
-Build Fedora and Rocky Linux RPMs for dtrx.
+Build Fedora and Rocky Linux RPMs for leo-cli.
 
 
 | Distribution       | Status
